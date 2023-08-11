@@ -1,0 +1,28 @@
+main {
+	grid-area: main;
+	display: grid;
+	height: 70vh;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-areas: "lado1 lado2 lado3"
+    ;
+	column-gap: 15px;
+	@include marginLat(8px,8px);
+ 
+	a{
+		text-decoration: none;
+	}
+
+	figure{
+		@include paddingLat(15px,15px);
+		img{
+			height: 170px;
+			border: $bordeImgGaleria;
+		}
+		figcaption{
+			height: 56px;
+			@include flexAlineacion(flex,center,center);
+		}
+	}
+}
+

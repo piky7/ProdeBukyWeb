@@ -1,0 +1,33 @@
+nav {
+   @include fondoPaginaBody;
+
+  .dropdown-menu{
+	height: 200px;
+	width: max-content;
+	overflow-y: scroll;
+	overflow-x: hidden;
+  }
+
+
+	a img {
+		&:hover{
+			transform: scale(0.97);
+		}
+		width: 110px;
+	}
+
+	.escudoAngosto img{
+		width: auto;
+       height: 100px;
+	}
+	ul{
+		li{
+			a{
+				&:hover{
+					transform: scale(1.1);
+				}
+				
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+footer {
+	@include flexAlineacion (flex,end,space-around)
+}
+.redes {
+	background-color: $colorNaranja;
+	flex-basis: 70%;
+	@include flexAlineacion (flex,center,space-around);
+	a img {
+		height: 25px;
+		width: 25px;
+	}
+}

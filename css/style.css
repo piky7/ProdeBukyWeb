@@ -1,0 +1,520 @@
+.bodyEstadisticas {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
+  grid-template-areas: "header" "main" "main2" "footer";
+  row-gap: 25px;
+}
+.bodyEstadisticas .main2 {
+  grid-area: main2;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "rebotes robos tapones puntosEquipo";
+  column-gap: 15px;
+  row-gap: 50px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.bodyEstadisticas .rebotes {
+  grid-area: rebotes;
+}
+.bodyEstadisticas .robos {
+  grid-area: robos;
+}
+.bodyEstadisticas .tapones {
+  grid-area: tapones;
+}
+.bodyEstadisticas .puntosEquipo {
+  grid-area: puntosEquipo;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: #492807;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000000' stroke-width='42' stroke-opacity='0.46' %3E%3Ccircle fill='%23492807' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23492707' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%234a2707' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%234a2607' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%234a2507' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%234a2406' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%234b2306' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%234b2306' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%234b2206' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%234c2106' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%234c2006' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%234c1f06' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%234d1e06' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%234d1e05' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%234d1d05' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%234d1c05' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%234e1b05' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%234E1A05' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 1fr 4fr 0.8fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "main" "footer";
+  row-gap: 15px;
+}
+
+nav {
+  background-color: #492807;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000000' stroke-width='42' stroke-opacity='0.46' %3E%3Ccircle fill='%23492807' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23492707' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%234a2707' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%234a2607' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%234a2507' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%234a2406' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%234b2306' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%234b2306' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%234b2206' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%234c2106' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%234c2006' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%234c1f06' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%234d1e06' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%234d1e05' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%234d1d05' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%234d1c05' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%234e1b05' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%234E1A05' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+nav .dropdown-menu {
+  height: 200px;
+  width: max-content;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+nav a img {
+  width: 110px;
+}
+nav a img:hover {
+  transform: scale(0.97);
+}
+nav .escudoAngosto img {
+  width: auto;
+  height: 100px;
+}
+nav ul li a:hover {
+  transform: scale(1.1);
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  height: 70vh;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "lado1 lado2 lado3";
+  column-gap: 15px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+main a {
+  text-decoration: none;
+}
+main figure {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+main figure img {
+  height: 170px;
+  border: 2px solid rgb(233, 224, 224);
+}
+main figure figcaption {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  display: flex;
+  align-items: end;
+  justify-content: space-around;
+}
+
+.redes {
+  background-color: rgba(224, 71, 0, 0.829);
+  flex-basis: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.redes a img {
+  height: 25px;
+  width: 25px;
+}
+
+aside table, main table {
+  width: 95%;
+  margin: 7px auto;
+  color: white;
+}
+aside table img, main table img {
+  width: 30px;
+  height: 30px;
+}
+aside table tr, main table tr {
+  cursor: pointer;
+}
+aside table .par, main table .par {
+  background-color: rgb(17, 17, 17);
+}
+aside table .impar, main table .impar {
+  background-color: darkgrey;
+  color: rgb(17, 17, 17);
+}
+
+.lado2 {
+  background-color: rgb(151, 140, 140);
+  border: 2px solid black;
+  grid-area: lado2;
+  overflow-x: hidden;
+}
+.lado2 table tr th {
+  font-size: 1.3rem;
+  background-color: black;
+}
+.lado2 table tr td {
+  font-size: 1rem;
+  font-weight: bold;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.lado1 {
+  background-color: rgb(151, 140, 140);
+  border: 2px solid black;
+  grid-area: lado1;
+  text-align: center;
+  overflow: auto;
+}
+.lado1 a h1:hover {
+  transform: scale(0.97);
+}
+
+.lado3 {
+  background-color: rgb(151, 140, 140);
+  border: 2px solid black;
+  grid-area: lado3;
+  overflow: auto;
+}
+.lado3 a h1:hover {
+  transform: scale(0.97);
+}
+
+.lado1 table tr th, .lado3 table tr th {
+  text-align: start;
+}
+
+.lado1 table tr td, .lado3 table tr td {
+  font-size: 1rem;
+  padding-left: 3px;
+  padding-right: 3px;
+  font-weight: bold;
+}
+
+figcaption {
+  background-color: #222;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: center;
+}
+
+.logoLiga {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+  height: 25%;
+}
+.logoLiga img {
+  width: 100%;
+}
+
+aside h1, article h1 {
+  background-color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+  border: 2px solid orangered;
+  padding: 5px;
+  color: rgb(238, 247, 255);
+  text-align: center;
+}
+
+.destacado {
+  font-family: Arial;
+  font-weight: bold;
+  background-color: rgb(0, 0, 0);
+}
+
+.centrarTabla table tr th {
+  width: 33%;
+  height: max-content;
+  text-align: center;
+}
+
+.centrarTabla table tr td {
+  width: 33%;
+  text-align: center;
+}
+
+.par td, .impar td {
+  text-align: start;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.par:hover, .impar:hover {
+  color: rgb(17, 17, 17);
+  background-color: rgba(224, 71, 0, 0.829);
+  transform: scale(0.99);
+}
+
+.bodyContacto {
+  display: grid;
+  grid-template-rows: 0.1fr 1fr 0.05fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "main" "footer";
+}
+.bodyContacto .mainContacto {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "articulo";
+  justify-items: center;
+  align-items: center;
+}
+.bodyContacto .mainContacto article {
+  width: 250px;
+  grid-area: articulo;
+}
+.bodyContacto .mainContacto .formulario form {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.bodyContacto .mainContacto .formulario form div {
+  padding: 5px;
+}
+.bodyContacto .mainContacto .formulario form div input {
+  border: 2px solid orangered;
+}
+.bodyContacto .mainContacto .formulario form div input::placeholder {
+  font-size: 0.9em;
+  padding: 2px;
+}
+.bodyContacto .mainContacto .formulario form div .btn {
+  background-color: black;
+  color: white;
+}
+.bodyContacto .mainContacto .formulario form div .btn:hover {
+  background-color: rgba(224, 71, 0, 0.829);
+  border: 2px solid black;
+}
+.bodyContacto .mainContacto .formulario form div select {
+  border: 2px solid orangered;
+}
+.bodyContacto .mainContacto .formulario form div textarea {
+  height: 100px;
+  border: 2px solid orangered;
+}
+
+.body-noticias {
+  height: 200vh;
+  display: grid;
+  grid-template-rows: 0.1fr 1fr 0.05fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "main" "footer";
+}
+.body-noticias .mainNoticias {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "articulo";
+  padding: 40px;
+  margin-top: 5px;
+}
+.body-noticias .noticiasN {
+  height: max-content;
+  grid-area: articulo;
+}
+.body-noticias .noticiasN h1 {
+  font-size: 2rem;
+}
+.body-noticias .noticiasN .contenedor-padre-noticias {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+.body-noticias .noticiasN .contenedor-padre-noticias .carta-contenedor {
+  display: flex;
+  justify-content: space-around;
+  height: auto;
+}
+.body-noticias .noticiasN .contenedor-padre-noticias .carta-contenedor .card {
+  width: 300px;
+  cursor: default;
+}
+.body-noticias .noticiasN .contenedor-padre-noticias .carta-contenedor .card img {
+  height: 150px;
+}
+.body-noticias .noticiasN .contenedor-padre-noticias .carta-contenedor .card:hover {
+  transform: scale(1.03);
+}
+
+.equipos-noticias {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 0.1fr 1fr 0.05fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "main" "footer";
+}
+.equipos-noticias .mainEquipos .tablaEquipos {
+  height: max-content;
+}
+.equipos-noticias .mainEquipos .tablaEquipos .plantillaEquipos {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 5px;
+  grid-template-areas: "infoEquipos jugadores";
+}
+.equipos-noticias .mainEquipos .tablaEquipos .plantillaEquipos .escudo {
+  width: 200px;
+  height: 200px;
+}
+.equipos-noticias .mainEquipos .tablaEquipos .plantillaEquipos .infoEquipos {
+  grid-area: infoEquipos;
+  height: max-content;
+}
+.equipos-noticias .mainEquipos .tablaEquipos .plantillaEquipos .jugadores {
+  grid-area: jugadores;
+}
+.equipos-noticias .mainEquipos .tablaEquipos .plantillaEquipos .jugadores th {
+  font-size: 1rem;
+}
+.equipos-noticias .mainEquipos .tablaEquipos .plantillaEquipos .jugadores td {
+  text-align: start;
+  padding: 5px;
+  font-size: 0.9rem;
+}
+.equipos-noticias .mainEquipos .tablaEquipos .plantillaEquipos .jugadores .dt {
+  background-color: rgba(12, 12, 141, 0.281);
+}
+
+@media (max-width: 1023px) {
+  .equipos-noticias {
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .equipos-noticias .mainEquipos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "tablaEquipos";
+  }
+  .equipos-noticias .mainEquipos .tablaEquipos {
+    grid-area: tablaEquipos;
+  }
+  .equipos-noticias .mainEquipos .tablaEquipos .plantillaEquipos {
+    display: grid;
+    grid-template-columns: 0.8fr;
+    grid-template-rows: 0.7fr 1fr;
+    column-gap: 5px;
+    grid-template-areas: "infoEquipos" "jugadores";
+    justify-content: center;
+  }
+  .equipos-noticias .mainEquipos .tablaEquipos .plantillaEquipos .infoEquipo div {
+    display: flex;
+    justify-content: center;
+  }
+  .equipos-noticias .mainEquipos .tablaEquipos .plantillaEquipos div {
+    height: max-content;
+  }
+  .equipos-noticias .mainEquipos .tablaEquipos .plantillaEquipos div .escudo {
+    text-align: center;
+  }
+  .bodyContacto {
+    row-gap: 0.2px;
+  }
+  .bodyContacto .mainContacto article form div textarea {
+    width: 100px;
+  }
+  .bodyEstadisticas .main2 {
+    grid-area: main2;
+    grid-template-rows: repeat(4, 0.5fr);
+    grid-template-columns: 1fr;
+    grid-template-areas: "robos" "rebotes" "tapones" "puntosEquipo";
+  }
+  .bodyEstadisticas .robos {
+    grid-area: robos;
+  }
+  .bodyEstadisticas .rebotes {
+    grid-area: rebotes;
+  }
+  .bodyEstadisticas .tapones {
+    grid-area: tapones;
+  }
+  .bodyEstadisticas .puntosEquipo {
+    grid-area: puntosEquipo;
+  }
+  main {
+    grid-area: main;
+    display: grid;
+    height: auto;
+    grid-template-rows: repeat(3, 0.5fr);
+    grid-template-columns: 1fr;
+    grid-template-areas: "lado2" "lado1" "lado3";
+    column-gap: 15px;
+    row-gap: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  main .asistencias table tr td, main .posiciones table tr td {
+    text-align: start;
+  }
+  nav ul li a:hover {
+    transform: scale(1);
+  }
+  .posicionesN {
+    grid-area: lado3;
+  }
+  .noticiasN {
+    grid-area: lado1;
+  }
+  .miniNoticiasN {
+    grid-area: lado2;
+  }
+  .asistencias {
+    grid-area: lado2;
+  }
+  .posiciones {
+    grid-area: lado1;
+  }
+  .goleadores {
+    grid-area: lado3;
+  }
+  .noticiasN .contenedor-padre-noticias .carta-contenedor {
+    height: max-content;
+  }
+  .lado2, .lado1, .lado3 {
+    height: max-content;
+  }
+  .lado2 table tr th, .lado1 table tr th, .lado3 table tr th {
+    text-align: start;
+    font-size: 1rem;
+  }
+  .lado2 table tr td, .lado3 table tr td {
+    text-align: center;
+    font-size: 1rem;
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+  .centrarTabla table tr td, .centrarTabla table tr th {
+    width: 33%;
+    height: max-content;
+    text-align: center;
+  }
+  .galeria figure {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .galeria figure img {
+    border: 2px solid rgb(233, 224, 224);
+  }
+  .galeria figure figcaption {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  main .centrarTabla table tr th, main .centrarTabla table tr td {
+    width: 33%;
+    height: max-content;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
